@@ -7,6 +7,9 @@
     <groupId>com.duannd</groupId>
     <artifactId>java-effective</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>concurrency</module>
+    </modules>
 
     <packaging>pom</packaging>
 
@@ -14,6 +17,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <slf4j.version>1.7.32</slf4j.version>
+        <logback.version>1.2.10</logback.version>
+        <junit5.version>5.8.2</junit5.version>
     </properties>
 
     <dependencyManagement>
@@ -23,24 +29,24 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>1.7.32</version>
+                <version>${slf4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>1.2.9</version>
+                <version>${logback.version}</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
-                <version>1.2.9</version>
+                <version>${logback.version}</version>
             </dependency>
 
             <!-- JUnit TESTs -->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-engine</artifactId>
-                <version>5.8.1</version>
+                <version>${junit5.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
